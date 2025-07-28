@@ -1,9 +1,11 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.cjs.tsbuildinfo",
     "module": "commonjs",
     "outDir": "./lib/cjs",
     "composite": true, 
-    "declaration": true 
+    "declaration": true,
+    "noEmit": false
   }
 }

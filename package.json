@@ -1,11 +1,11 @@
 {
   "name": "@spring4js/reconnecting-websocket",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/esm/index.d.ts",
   "scripts": {
-    "build": "rimraf ./lib && tsc -b",
+    "build": "rimraf ./lib && rimraf ./node_modules/.tmp && tsc -b",
     "test": "jest",
     "publish-to-center": "npm publish --registry https://registry.npmjs.org/"
   },
