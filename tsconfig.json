@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true,
+    "experimentalDecorators": false,
+    "declaration": true,
+    "importHelpers":true,
+    "rootDir": "./src",
+    "baseUrl": "./src"
+  },
+  "include": ["src/**/*"],
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Recommended",
+    "references": [
+    { "path": "./tsconfig.esm.json" },
+    { "path": "./tsconfig.cjs.json" }
+  ]
+}
