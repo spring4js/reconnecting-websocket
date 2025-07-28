@@ -124,7 +124,7 @@ export interface WebSocket extends EventTarget {
   ): void
 }
 
-export enum EWebSocketState {
+export enum EReadyState {
   CONNECTING = 0,
   OPEN = 1,
   CLOSING = 2,
