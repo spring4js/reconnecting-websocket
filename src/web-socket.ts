@@ -124,23 +124,7 @@ export interface WebSocket extends EventTarget {
   ): void
 }
 
-// export interface WebSocket {
-//     prototype: WebSocket;
-//
-//     new(url: string | URL, protocols?: string | string[]): WebSocket;
-//     close(code: number, reason?: string)
-//     readonly url: string;
-//     readonly protocol: string;
-//     binaryType : BinaryType;
-//     readonly extensions: string;
-//     readonly bufferedAmount: number;
-//     readonly readyState: number;
-//     readonly CLOSED: number;
-//     readonly CLOSING: number;
-//     readonly CONNECTING: number;
-//     readonly OPEN: number;
-// };
-export enum EWebSocketReadyState {
+export enum EWebSocketState {
   CONNECTING = 0,
   OPEN = 1,
   CLOSING = 2,

@@ -1,5 +1,5 @@
 import * as Events from './events'
-import { WebSocket, BinaryType, ECloseCode, EWebSocketReadyState } from './web-socket'
+import { WebSocket, BinaryType, ECloseCode, EWebSocketState } from './web-socket'
 
 // const MAX_RETRIES = 10 // 最大重试次数
 // const BASE_DELAY = 200 // 基础延迟时间(ms)
@@ -168,13 +168,13 @@ export class ReconnectingWebSocket<M> {
    */
   get readyState(): number {
     if (this._shouldReconnect) {
-      if (this._ws?.readyState === EWebSocketReadyState.OPEN) {
-        return EWebSocketReadyState.OPEN
+      if (this._ws?.readyState === EWebSocketState.OPEN) {
+        return EWebSocketState.OPEN
       } else {
         return ReconnectingWebSocket.CONNECTING
       }
     } else {
-      return EWebSocketReadyState.CLOSED
+      return EWebSocketState.CLOSED
     }
   }
 
